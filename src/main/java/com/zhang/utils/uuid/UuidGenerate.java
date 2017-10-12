@@ -1,4 +1,4 @@
-package com.zhang.utils;
+package com.zhang.utils.uuid;
 
 import java.util.UUID;
 

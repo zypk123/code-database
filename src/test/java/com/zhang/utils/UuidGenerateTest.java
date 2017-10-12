@@ -1,5 +1,6 @@
 package com.zhang.utils;
 
+import com.zhang.utils.uuid.UuidGenerate;
 import org.junit.Test;
 
 /**
