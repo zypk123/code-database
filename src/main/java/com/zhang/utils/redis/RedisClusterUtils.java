@@ -55,7 +55,6 @@ public class RedisClusterUtils {
      */
     private static JedisCluster jedisCluster;
 
-
     /**
      * 初始化JedisCluster对象
      *
