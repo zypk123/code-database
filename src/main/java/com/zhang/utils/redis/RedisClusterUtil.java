@@ -11,9 +11,9 @@ import java.util.*;
  *
  * @author zhangyu
  */
-public class RedisClusterUtils {
+public class RedisClusterUtil {
 
-    private static final Logger logger = LoggerFactory.getLogger(RedisClusterUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(RedisClusterUtil.class);
 
     /**
      * 连接超时时间
@@ -60,7 +60,7 @@ public class RedisClusterUtils {
      *
      * @param nodesString
      */
-    public RedisClusterUtils(String nodesString) {
+    public RedisClusterUtil(String nodesString) {
         genJedisConfig();
         // 逗号分隔集群的redis的IP
         String[] serverArray = nodesString.split(",");
@@ -69,7 +69,7 @@ public class RedisClusterUtils {
             String[] ipPortPair = ipPort.split(":");
             nodes.add(new HostAndPort(ipPortPair[0].trim(), Integer.valueOf(ipPortPair[1].trim())));
         }
-        RedisClusterUtils.jedisCluster = new JedisCluster(nodes, DEFAULT_TIMEOUT, DEFAULT_MAX_REDIRECTIONS, config);
+        RedisClusterUtil.jedisCluster = new JedisCluster(nodes, DEFAULT_TIMEOUT, DEFAULT_MAX_REDIRECTIONS, config);
     }
 
     /**
@@ -779,7 +779,7 @@ public class RedisClusterUtils {
         String nodesString = "10.3.98.153:7000,10.3.98.153:7001,10.3.98.154:7002,10.3.98.154:7003,10.3.98.155:7004,10.3.98.155:7005";
         System.out.println("nodesString:" + nodesString);
         long time1 = System.currentTimeMillis();
-        RedisClusterUtils rcu = new RedisClusterUtils(nodesString);
+        RedisClusterUtil rcu = new RedisClusterUtil(nodesString);
         System.out.println("======" + rcu.toString());
         rcu.setValue("li", "chunjie");
         System.out.println(rcu.setValueIfNotExist("li2", "chunjie123"));
