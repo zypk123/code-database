@@ -42,7 +42,6 @@ public class HttpJavaTest {
         return result;
     }
 
-
     /**
      * 模拟发送HTTP请求
      *
