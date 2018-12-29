@@ -9,7 +9,7 @@ import java.util.List;
  * @author zhangyu
  * @create 2018-06-08 14:48
  **/
-public class TreeParser {
+public class TreeParser1 {
 
     /**
      * 解析树形数据

@@ -36,7 +36,7 @@ public class Test {
         menu4.setName("菜单111");
         list.add(menu4);
 
-        List<Menu> menus = TreeParser.getTreeList("3", list);
+        List<Menu> menus = TreeParser1.getTreeList("1", list);
         System.out.println(menus);
     }
 }
