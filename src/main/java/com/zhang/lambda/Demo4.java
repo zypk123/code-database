@@ -60,12 +60,11 @@ public class Demo4 {
         javaProgrammers.forEach(giveRaise);
         phpProgrammers.forEach(giveRaise);
 
-        // 使用过滤器filter()
+        // filter：过滤器
         System.out.println("下面是月薪超过 $1,400 的PHP程序员:");
         phpProgrammers.stream()
                 .filter((p) -> (p.getSalary() > 1400))
                 .forEach((p) -> System.out.println(p.getFirstName() + "-" + p.getLastName()));
-
 
         // 定义过滤器,然后重用它们来执行其他操作
         Predicate<Person> ageFilter = (p) -> (p.getAge() > 25);
@@ -80,7 +79,7 @@ public class Demo4 {
                 .forEach((p) -> System.out.println(p));
 
 
-        // 使用limit方法,限制结果集的个数
+        // limit：限制结果集的个数
         System.out.println("最前面的3个 Java programmers:");
         javaProgrammers.stream()
                 .limit(3)
@@ -92,8 +91,7 @@ public class Demo4 {
                 .limit(3)
                 .forEach((p) -> System.out.println(p));
 
-
-        // 在stream中进行排序
+        // sorted：排序
         System.out.println("根据 name 排序,并显示前5个 Java programmers:");
         javaProgrammers.stream()
                 .sorted((p1, p2) -> (p1.getFirstName().compareTo(p2.getFirstName())))
@@ -121,7 +119,7 @@ public class Demo4 {
                 .get();
         System.out.println(minPerson);
 
-        // map方法使用
+        // map: 转换
         System.out.println("将 PHP programmers的 name 拼接成字符串:");
         String phpDevelopers = phpProgrammers
                 .stream()

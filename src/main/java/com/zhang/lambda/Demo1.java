@@ -30,6 +30,7 @@ public class Demo1 {
         players.forEach((player) -> System.out.println(player));
 
         // 3. 在Java8中使用双冒号操作符
+        // 双冒号规则 类名::方法名 注意方法名不要加括号
         players.forEach(System.out::println);
 
     }
